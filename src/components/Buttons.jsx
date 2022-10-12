@@ -4,10 +4,14 @@ import { Btn, List } from './styles.styled';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <List>
-      {options.map((option, index) => {
+      {options.map(option => {
         return (
-          <li key={index}>
-            <Btn type="button" onClick={() => onLeaveFeedback(option)}>
+          <li key={option}>
+            <Btn
+              type="button"
+              name={option}
+              onClick={onLeaveFeedback(option)}
+            >
               {option}
             </Btn>
           </li>
