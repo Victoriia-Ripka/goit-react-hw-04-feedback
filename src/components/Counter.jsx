@@ -30,7 +30,7 @@ export default function Counter() {
   const total = good + neutral + bad;
   const positiveFeedback = total ? Math.round((good / total) * 100) : '0';
 
-  const feedbackState = ['good', 'neutral', 'bad'];
+  const feedbackState = Object.keys({ good, neutral, bad });
   return (
     <SectionStyled>
       <Section title="Please leave feedback">
